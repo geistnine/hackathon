@@ -6,5 +6,11 @@
   "action": {
     "default_pop": "hello.html",
     "default_icon": "http://www.clker.com/cliparts/v/R/A/S/s/p/dark-green-video-icon-green-hi.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["script.js"]
+    }
+  ]
 }
