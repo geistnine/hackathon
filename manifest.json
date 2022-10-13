@@ -10,7 +10,8 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["script.js"]
+      "js": ["lunicode.js", "script.js"],
+      "css": ["style.css"]
     }
   ]
 }
