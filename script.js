@@ -1,10 +1,8 @@
 const luni = new Lunicode();
-let test = luni.tools.creepify.encode('some text please god please work')
+let test = luni.tools.creepify.encode('Corruption')
 console.log(test);
 
-alert("Script.js is running yo!")
-
-const toZalgo = document.querySelectorAll('p');
+const toZalgo = document.querySelectorAll('p, span');
 toZalgo.forEach((text) =>{
   text.style.color = 'red';
   text.innerHTML = luni.tools.creepify.encode(text.textContent);
@@ -41,16 +39,30 @@ const videoToChange = document.querySelectorAll('a', 'span');
 // change the src attribute to https://www.youtube.com/watch?v=dQw4w9WgXcQ
 videoToChange.forEach((link) => {
   link.removeAttribute('href');
-  link.setAttribute('href', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  link.setAttribute('href', 'https://www.youtube.com/watch?v=8JyAWGP7Uj4');
   link.removeAttribute('src');
-  link.setAttribute('src', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+  link.setAttribute('src', 'https://www.youtube.com/watch?v=8JyAWGP7Uj4');
 })
 const sound = document.createElement('audio');
 sound.setAttribute('id','sound');
 sound.setAttribute('src', 'bloodborne.mp3');
+sound.setAttribute('autoplay', 'true');
 document.body.appendChild(sound)
 const thisSound = document.querySelector('#sound');
+
 //const theSound = new Audio(chrome.runtime.getURL('bloodborne.mp3'));
-thisSound.play();
+
 // videoToChange.removeAttribute('href')
 // videoToChange.setAttribute('href', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
+chrome.tts.speak('Greetings, mortal.');
+chrome.tts.getVoices(
+  function(voices) {
+    for (var i = 0; i < voices.length; i++) {
+      console.log('Voice ' + i + ':');
+      console.log('  name: ' + voices[i].voiceName);
+      console.log('  lang: ' + voices[i].lang);
+      console.log('  extension id: ' + voices[i].extensionId);
+      console.log('  event types: ' + voices[i].eventTypes);
+    }
+  }
+);
