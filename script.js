@@ -6,9 +6,18 @@ alert("Script.js is running yo!")
 
 const toZalgo = document.querySelectorAll('p');
 toZalgo.forEach((text) =>{
+  text.style.color = 'red';
   text.innerHTML = luni.tools.creepify.encode(text.textContent);
+  
 })
 
+// change background image or to image
+document.body.style.backgroundImage = "url('https://assets.dicebreaker.com/chulhu-death-may-die-horror-board-game-box-artwork.jpg/BROK/thumbnail/1600x900/quality/100/chulhu-death-may-die-horror-board-game-box-artwork.jpg)";
+const divs = document.querySelectorAll('div');
+divs.forEach((div) => {
+  div.style.backgroundImage = "url('https://assets.dicebreaker.com/chulhu-death-may-die-horror-board-game-box-artwork.jpg/BROK/thumbnail/1600x900/quality/100/chulhu-death-may-die-horror-board-game-box-artwork.jpg)";
+}) 
+//style.backgroundImage = "url('https://assets.dicebreaker.com/chulhu-death-may-die-horror-board-game-box-artwork.jpg/BROK/thumbnail/1600x900/quality/100/chulhu-death-may-die-horror-board-game-box-artwork.jpg)";
 // select the video element in our DOM
 document.querySelector('video-title-link')
 //document.querySelector('thumbnail')
@@ -36,5 +45,12 @@ videoToChange.forEach((link) => {
   link.removeAttribute('src');
   link.setAttribute('src', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');
 })
+const sound = document.createElement('audio');
+sound.setAttribute('id','sound');
+sound.setAttribute('src', 'bloodborne.mp3');
+document.body.appendChild(sound)
+const thisSound = document.querySelector('#sound');
+//const theSound = new Audio(chrome.runtime.getURL('bloodborne.mp3'));
+thisSound.play();
 // videoToChange.removeAttribute('href')
 // videoToChange.setAttribute('href', 'https://www.youtube.com/watch?v=dQw4w9WgXcQ');

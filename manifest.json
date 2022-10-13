@@ -4,8 +4,8 @@
   "description": "Replaces vids",
   "version": "0.1",
   "action": {
-    "default_pop": "hello.html",
-    "default_icon": "http://www.clker.com/cliparts/v/R/A/S/s/p/dark-green-video-icon-green-hi.png"
+    "default_popup": "hello.html",
+    "default_icon": "cthulhuicon.jpg"
   },
   "content_scripts": [
     {
